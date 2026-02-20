@@ -13,14 +13,14 @@
 
 - GET /feed
   - 新着順でフィードを取得する
-  - `curl http://localhost:9000/feed`
+  - `curl http://localhost:9090/feed | jq .`
 - POST /feed
   - 新しいサイトを登録する
   - パラメータ(JSON): `{"url": "登録したいサイトのURL"}`
-  - `curl -X POST -H "Content-Type: application/json" -d '{"url": "https://example.com"}' http://localhost:9000/feed`
+  - `curl -X POST -H "Content-Type: application/json" -d '{"url": "https://prtimes.jp/technology/"}' http://localhost:9090/feed | jq .`
 - DELETE /feed/{feed_id}
   - 指定されたフィードIDのフィードを削除する
-  - `curl -X DELETE http://localhost:9000/feed/1`
+  - `curl -X DELETE http://localhost:9090/feed/1 | jq .`
 
 ## フォルダ構成
 
