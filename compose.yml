@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "9000:8000"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///data/feeds.db
+    restart: always
