@@ -40,7 +40,7 @@
 ## 実行方法
 
 ```bash
-podman compose up -d
+podman compose up --build -d
 ```
 
 ## 停止方法
